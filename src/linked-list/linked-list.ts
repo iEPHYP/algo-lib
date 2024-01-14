@@ -27,6 +27,12 @@ export class LinkedList<TValue> {
     return this.size() === 0;
   }
 
+  public clear() {
+    this.head = null;
+    this.tail = null;
+    this._size = 0;
+  }
+
   // O(N)TS
   public toList() {
     const list: TValue[] = [];
