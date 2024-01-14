@@ -1,6 +1,6 @@
 import { RawEdges } from './graph-storage';
 
-export const rawEdges: RawEdges = [
+export const indirectConnectedGraphRawEdges: RawEdges = [
   [0, 1],
   [0, 3],
   [3, 4],

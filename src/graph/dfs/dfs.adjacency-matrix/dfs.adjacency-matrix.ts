@@ -11,9 +11,11 @@ export const adjacencyMatrixGraphDfs = (
     onVertexVisit(vertexIndex);
     visitedVerticesMap[vertexIndex] = true;
 
-    graph[vertexIndex].forEach((connectedToAdjancencyVertex, adjancencyVertexIndex) => {
-      if (connectedToAdjancencyVertex && !visitedVerticesMap[adjancencyVertexIndex]) {
-        search(adjancencyVertexIndex);
+    const verticesConnectionMap = graph[vertexIndex];
+    verticesConnectionMap.forEach((adjacentVertexConnected, adjacentVertexIndex) => {
+      const adjacentVertexVisited = visitedVerticesMap[adjacentVertexIndex];
+      if (adjacentVertexConnected && !adjacentVertexVisited) {
+        search(adjacentVertexIndex);
       }
     });
   };

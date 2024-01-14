@@ -1,9 +1,9 @@
 import { convertEdgesToAdjacencyListGraph } from '../../graph-storage';
-import { rawEdges } from '../../rawEdges.mock';
+import { indirectConnectedGraphRawEdges } from '../../rawEdges.mock';
 import { adjacencyListGraphDfs } from './dfs.adjacency-list';
 
 test('adjacencyListGraphDfs should print visited vertices in the right order', () => {
-  const graph = convertEdgesToAdjacencyListGraph(rawEdges);
+  const graph = convertEdgesToAdjacencyListGraph(indirectConnectedGraphRawEdges);
 
   const visitedVertexIndices: number[] = [];
 
