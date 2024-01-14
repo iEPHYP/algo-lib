@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`convertEdgesToAdjacencyListGraph properly converts Edges to AdjacencyListGraph 1`] = `
+[
+  {
+    "adjacentVertexIndices": [
+      1,
+      3,
+    ],
+    "index": 0,
+  },
+  {
+    "adjacentVertexIndices": [
+      0,
+      5,
+      6,
+    ],
+    "index": 1,
+  },
+  {
+    "adjacentVertexIndices": [
+      6,
+    ],
+    "index": 2,
+  },
+  {
+    "adjacentVertexIndices": [
+      0,
+      4,
+    ],
+    "index": 3,
+  },
+  {
+    "adjacentVertexIndices": [
+      3,
+      7,
+    ],
+    "index": 4,
+  },
+  {
+    "adjacentVertexIndices": [
+      1,
+      6,
+    ],
+    "index": 5,
+  },
+  {
+    "adjacentVertexIndices": [
+      1,
+      5,
+      2,
+    ],
+    "index": 6,
+  },
+  {
+    "adjacentVertexIndices": [
+      4,
+    ],
+    "index": 7,
+  },
+]
+`;

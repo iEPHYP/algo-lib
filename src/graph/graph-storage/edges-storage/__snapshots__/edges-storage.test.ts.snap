@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getNormalizedEdges properly converts Raw Edges into Normalized Edges 1`] = `
+[
+  {
+    "vertexInIndex": 1,
+    "vertexOutIndex": 0,
+  },
+  {
+    "vertexInIndex": 3,
+    "vertexOutIndex": 0,
+  },
+  {
+    "vertexInIndex": 4,
+    "vertexOutIndex": 3,
+  },
+  {
+    "vertexInIndex": 7,
+    "vertexOutIndex": 4,
+  },
+  {
+    "vertexInIndex": 5,
+    "vertexOutIndex": 1,
+  },
+  {
+    "vertexInIndex": 6,
+    "vertexOutIndex": 1,
+  },
+  {
+    "vertexInIndex": 6,
+    "vertexOutIndex": 5,
+  },
+  {
+    "vertexInIndex": 2,
+    "vertexOutIndex": 6,
+  },
+]
+`;
