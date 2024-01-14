@@ -1,0 +1,6 @@
+{
+  "watch": ["src"],
+  "ext": "ts,json",
+  "ignore": ["src/**/*.spec.ts"],
+  "exec": "ts-node ./src/graph/dfs/dfs.adjacency-list/dfs.adjacency-list.test.ts"
+}
