@@ -96,7 +96,7 @@ export class LinkedList<TValue> {
   /** Removes the first element and returns removed element O(1)TS */
   public shift() {
     const previousHead = this.head;
-    this.head = previousHead?.nextItem || null;
+    this.head = previousHead?.nextItem ?? null;
 
     this.decrementSize();
 
@@ -105,7 +105,7 @@ export class LinkedList<TValue> {
       this.head = null;
     }
 
-    return previousHead?.value || null;
+    return previousHead?.value ?? null;
   }
 
   /** Adds element to the end O(1)TS */
