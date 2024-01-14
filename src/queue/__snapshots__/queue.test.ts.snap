@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Queue dequeues elements: on Queue List with 1 item 1`] = `[]`;
+
+exports[`Queue dequeues elements: on Queue List with 2 items 1`] = `
+[
+  2,
+]
+`;
+
+exports[`Queue dequeues elements: on Queue List with 3 items 1`] = `
+[
+  2,
+  3,
+]
+`;
+
+exports[`Queue dequeues elements: on Queue with 1 item 1`] = `
+Queue {
+  "linkedList": LinkedList {
+    "_size": 0,
+    "head": null,
+    "tail": null,
+  },
+}
+`;
+
+exports[`Queue dequeues elements: on Queue with 2 items 1`] = `
+Queue {
+  "linkedList": LinkedList {
+    "_size": 1,
+    "head": {
+      "nextItem": null,
+      "previousItem": {
+        "nextItem": [Circular],
+        "previousItem": null,
+        "value": 1,
+      },
+      "value": 2,
+    },
+    "tail": {
+      "nextItem": null,
+      "previousItem": {
+        "nextItem": [Circular],
+        "previousItem": null,
+        "value": 1,
+      },
+      "value": 2,
+    },
+  },
+}
+`;
+
+exports[`Queue dequeues elements: on Queue with 3 items 1`] = `
+Queue {
+  "linkedList": LinkedList {
+    "_size": 2,
+    "head": {
+      "nextItem": {
+        "nextItem": null,
+        "previousItem": [Circular],
+        "value": 3,
+      },
+      "previousItem": {
+        "nextItem": [Circular],
+        "previousItem": null,
+        "value": 1,
+      },
+      "value": 2,
+    },
+    "tail": {
+      "nextItem": null,
+      "previousItem": {
+        "nextItem": [Circular],
+        "previousItem": {
+          "nextItem": [Circular],
+          "previousItem": null,
+          "value": 1,
+        },
+        "value": 2,
+      },
+      "value": 3,
+    },
+  },
+}
+`;
+
+exports[`Queue dequeues elements: on empty Queue 1`] = `
+Queue {
+  "linkedList": LinkedList {
+    "_size": 0,
+    "head": null,
+    "tail": null,
+  },
+}
+`;
+
+exports[`Queue dequeues elements: on empty Queue List 1`] = `[]`;
+
+exports[`Queue enqueues elements: on Queue List with 1 item 1`] = `
+[
+  1,
+  2,
+]
+`;
+
+exports[`Queue enqueues elements: on Queue List with 2 items 1`] = `
+[
+  1,
+  2,
+  3,
+]
+`;
+
+exports[`Queue enqueues elements: on Queue with 1 item 1`] = `
+Queue {
+  "linkedList": LinkedList {
+    "_size": 2,
+    "head": {
+      "nextItem": {
+        "nextItem": null,
+        "previousItem": [Circular],
+        "value": 2,
+      },
+      "previousItem": null,
+      "value": 1,
+    },
+    "tail": {
+      "nextItem": null,
+      "previousItem": {
+        "nextItem": [Circular],
+        "previousItem": null,
+        "value": 1,
+      },
+      "value": 2,
+    },
+  },
+}
+`;
+
+exports[`Queue enqueues elements: on Queue with 2 items 1`] = `
+Queue {
+  "linkedList": LinkedList {
+    "_size": 3,
+    "head": {
+      "nextItem": {
+        "nextItem": {
+          "nextItem": null,
+          "previousItem": [Circular],
+          "value": 3,
+        },
+        "previousItem": [Circular],
+        "value": 2,
+      },
+      "previousItem": null,
+      "value": 1,
+    },
+    "tail": {
+      "nextItem": null,
+      "previousItem": {
+        "nextItem": [Circular],
+        "previousItem": {
+          "nextItem": [Circular],
+          "previousItem": null,
+          "value": 1,
+        },
+        "value": 2,
+      },
+      "value": 3,
+    },
+  },
+}
+`;
+
+exports[`Queue enqueues elements: on empty Queue 1`] = `
+Queue {
+  "linkedList": LinkedList {
+    "_size": 1,
+    "head": {
+      "nextItem": null,
+      "previousItem": null,
+      "value": 1,
+    },
+    "tail": {
+      "nextItem": null,
+      "previousItem": null,
+      "value": 1,
+    },
+  },
+}
+`;
+
+exports[`Queue enqueues elements: on empty Queue List 1`] = `
+[
+  1,
+]
+`;
+
+exports[`Queue initializes correctly: initialized Queue 1`] = `
+Queue {
+  "linkedList": LinkedList {
+    "_size": 0,
+    "head": null,
+    "tail": null,
+  },
+}
+`;
+
+exports[`Queue initializes correctly: initialized Queue in List 1`] = `[]`;
+
+exports[`Queue performs combined operations 1`] = `
+Queue {
+  "linkedList": LinkedList {
+    "_size": 1,
+    "head": {
+      "nextItem": null,
+      "previousItem": {
+        "nextItem": [Circular],
+        "previousItem": {
+          "nextItem": [Circular],
+          "previousItem": null,
+          "value": 1,
+        },
+        "value": 2,
+      },
+      "value": 3,
+    },
+    "tail": {
+      "nextItem": null,
+      "previousItem": {
+        "nextItem": [Circular],
+        "previousItem": {
+          "nextItem": [Circular],
+          "previousItem": null,
+          "value": 1,
+        },
+        "value": 2,
+      },
+      "value": 3,
+    },
+  },
+}
+`;
+
+exports[`Queue performs combined operations 2`] = `
+[
+  3,
+]
+`;
