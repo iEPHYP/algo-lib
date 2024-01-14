@@ -1,3 +1,5 @@
+import { EventEmitter } from 'events';
+
 import { LinkedList } from '../linked-list';
 
 export class Queue<TValue = number> {
@@ -9,10 +11,14 @@ export class Queue<TValue = number> {
 
   public enqueue(value: TValue) {
     this.linkedList.push(value);
+    this.eventEmitter.emit('enqueue', value);
   }
 
   public dequeue() {
-    return this.linkedList.shift();
+    const dequeuedItem = this.linkedList.shift();
+    this.eventEmitter.emit('dequeue', dequeuedItem);
+
+    return dequeuedItem;
   }
 
   public empty() {
@@ -25,5 +31,15 @@ export class Queue<TValue = number> {
 
   public clear() {
     this.linkedList.clear();
+  }
+
+  private eventEmitter = new EventEmitter();
+
+  public subscribeToEnqueue(callback: (value: TValue) => void) {
+    this.eventEmitter.on('enqueue', callback);
+  }
+
+  public subscribeToDequeue(callback: (value: ReturnType<typeof this.dequeue>) => void) {
+    this.eventEmitter.on('enqueue', callback);
   }
 }
