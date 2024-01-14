@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkedList adds elements to the beginning with unshift: unshifts for Linked List with 1 item 1`] = `
+[
+  2,
+  1,
+]
+`;
+
+exports[`LinkedList adds elements to the beginning with unshift: unshifts for Linked List with 2 items 1`] = `
+[
+  3,
+  2,
+  1,
+]
+`;
+
+exports[`LinkedList adds elements to the beginning with unshift: unshifts for empty Linked List 1`] = `
+[
+  1,
+]
+`;
+
+exports[`LinkedList adds elements to the end with push: for Linked List with 1 item 1`] = `
+[
+  1,
+  2,
+]
+`;
+
+exports[`LinkedList adds elements to the end with push: for Linked List with 2 items 1`] = `
+[
+  1,
+  2,
+  3,
+]
+`;
+
+exports[`LinkedList adds elements to the end with push: for empty Linked List 1`] = `
+[
+  1,
+]
+`;
+
+exports[`LinkedList initializes correctly: initialized Linked List 1`] = `[]`;
+
+exports[`LinkedList looks as expected after several operations 1`] = `
+[
+  1,
+  2,
+  22,
+]
+`;
+
+exports[`LinkedList removes elements from the beginning with shift: shifts for Linked List with 1 item 1`] = `[]`;
+
+exports[`LinkedList removes elements from the beginning with shift: shifts for Linked List with 2 items 1`] = `
+[
+  1,
+]
+`;
+
+exports[`LinkedList removes elements from the beginning with shift: shifts for empty Linked List 1`] = `[]`;
+
+exports[`LinkedList removes elements from the end with pop: for Linked List with 1 item 1`] = `[]`;
+
+exports[`LinkedList removes elements from the end with pop: for Linked List with 2 items 1`] = `
+[
+  1,
+]
+`;
+
+exports[`LinkedList removes elements from the end with pop: for empty Linked List 1`] = `[]`;
