@@ -3,10 +3,13 @@ import { Queue } from 'queue';
 import { AdjacencyListGraph, AdjacencyListVertex } from '../../graph-storage';
 
 // Complexity O(N + M)TS
-export const adjacencyListGraphBfs = (
-  graph: AdjacencyListGraph,
-  onVertexVisit: (vertex: AdjacencyListVertex) => void
-) => {
+export const adjacencyListGraphBfs = ({
+  graph,
+  onVertexVisit,
+}: {
+  graph: AdjacencyListGraph;
+  onVertexVisit?: (vertex: AdjacencyListVertex) => void;
+}) => {
   const visitedVerticesMap: boolean[] = [];
 
   const firstVertexIndex = 0;
@@ -21,8 +24,8 @@ export const adjacencyListGraphBfs = (
     if (visitingVertexIndex === null) {
       break;
     }
-    const visitingVertex = graph[visitingVertexIndex];
-    onVertexVisit(visitingVertex);
+    const visitingVertex = graph.getVertex(visitingVertexIndex);
+    onVertexVisit?.(visitingVertex);
     visitingVertex.adjacentVertexIndices.forEach((adjacentVertexIndex) => {
       const adjacentVertexVisited = visitedVerticesMap[adjacentVertexIndex];
       if (!adjacentVertexVisited) {
@@ -30,4 +33,6 @@ export const adjacencyListGraphBfs = (
       }
     });
   }
+
+  return { visitedVerticesMap };
 };

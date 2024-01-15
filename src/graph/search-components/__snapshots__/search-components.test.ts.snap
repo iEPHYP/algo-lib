@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+[
+  [
+    {
+      "adjacentVertexIndices": [
+        5,
+        4,
+      ],
+      "index": 0,
+    },
+    {
+      "adjacentVertexIndices": [
+        0,
+      ],
+      "index": 5,
+    },
+    {
+      "adjacentVertexIndices": [
+        0,
+      ],
+      "index": 4,
+    },
+  ],
+  [
+    {
+      "adjacentVertexIndices": [
+        3,
+      ],
+      "index": 1,
+    },
+    {
+      "adjacentVertexIndices": [
+        1,
+        2,
+        9,
+      ],
+      "index": 3,
+    },
+    {
+      "adjacentVertexIndices": [
+        3,
+      ],
+      "index": 2,
+    },
+    {
+      "adjacentVertexIndices": [
+        3,
+      ],
+      "index": 9,
+    },
+  ],
+  [
+    {
+      "adjacentVertexIndices": [],
+      "index": 6,
+    },
+  ],
+  [
+    {
+      "adjacentVertexIndices": [
+        8,
+      ],
+      "index": 7,
+    },
+    {
+      "adjacentVertexIndices": [
+        7,
+      ],
+      "index": 8,
+    },
+  ],
+]
+`;

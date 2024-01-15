@@ -7,9 +7,13 @@ test('adjacencyListGraphDfs should print visited vertices in the right order', (
 
   const visitedVertexIndices: number[] = [];
 
-  adjacencyListGraphBfs(graph, (vertex) => {
-    visitedVertexIndices.push(vertex.index);
+  const { visitedVerticesMap } = adjacencyListGraphBfs({
+    graph,
+    onVertexVisit: (vertex) => {
+      visitedVertexIndices.push(vertex.index);
+    },
   });
 
   expect(visitedVertexIndices).toMatchSnapshot();
+  expect(visitedVerticesMap).toMatchSnapshot();
 });

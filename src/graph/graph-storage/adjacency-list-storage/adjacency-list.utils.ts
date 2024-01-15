@@ -8,23 +8,21 @@ export const convertEdgesToAdjacencyListGraph = (
   indirected = true
 ): AdjacencyListGraph => {
   const edges = getNormalizedEdges(rawEdges);
-  const adjacencyListGraph: AdjacencyListGraph = [];
+  const adjacencyListGraph = new AdjacencyListGraph();
 
   edges.forEach(({ vertexOutIndex, vertexInIndex }) => {
-    adjacencyListGraph[vertexOutIndex] = adjacencyListGraph[vertexOutIndex] || {
-      index: vertexOutIndex,
-      adjacentVertexIndices: [],
-    };
+    const vertexOut = adjacencyListGraph.getVertex(vertexOutIndex);
 
-    adjacencyListGraph[vertexOutIndex].adjacentVertexIndices.push(vertexInIndex);
+    adjacencyListGraph.setVertexAt(vertexOutIndex, vertexOut);
+
+    vertexOut.adjacentVertexIndices.push(vertexInIndex);
 
     if (indirected) {
-      adjacencyListGraph[vertexInIndex] = adjacencyListGraph[vertexInIndex] || {
-        index: vertexInIndex,
-        adjacentVertexIndices: [],
-      };
+      const vertexIn = adjacencyListGraph.getVertex(vertexInIndex);
 
-      adjacencyListGraph[vertexInIndex].adjacentVertexIndices.push(vertexOutIndex);
+      adjacencyListGraph.setVertexAt(vertexInIndex, vertexIn);
+
+      vertexIn.adjacentVertexIndices.push(vertexOutIndex);
     }
   });
 

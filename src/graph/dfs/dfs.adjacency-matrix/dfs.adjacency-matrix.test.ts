@@ -7,9 +7,13 @@ test('adjacencyMatrixGraphDfs should print visited vertices in the right order',
 
   const visitedVertexIndices: number[] = [];
 
-  adjacencyMatrixGraphDfs(graph, (vertexIndex) => {
-    visitedVertexIndices.push(vertexIndex);
+  const { visitedVerticesMap } = adjacencyMatrixGraphDfs({
+    graph,
+    onVertexVisit: (vertexIndex) => {
+      visitedVertexIndices.push(vertexIndex);
+    },
   });
 
   expect(visitedVertexIndices).toMatchSnapshot();
+  expect(visitedVerticesMap).toMatchSnapshot();
 });

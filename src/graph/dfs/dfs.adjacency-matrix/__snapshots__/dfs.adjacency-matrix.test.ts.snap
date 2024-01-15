@@ -12,3 +12,16 @@ exports[`adjacencyMatrixGraphDfs should print visited vertices in the right orde
   7,
 ]
 `;
+
+exports[`adjacencyMatrixGraphDfs should print visited vertices in the right order 2`] = `
+[
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+]
+`;

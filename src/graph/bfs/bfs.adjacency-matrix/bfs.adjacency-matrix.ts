@@ -3,10 +3,13 @@ import { Queue } from 'queue';
 import { AdjacencyMatrixGraph } from '../../graph-storage';
 
 // Complexity O(N^2)TS
-export const adjacencyMatrixGraphBfs = (
-  graph: AdjacencyMatrixGraph,
-  onVertexVisit: (visitedVertexIndex: number) => void
-) => {
+export const adjacencyMatrixGraphBfs = ({
+  graph,
+  onVertexVisit,
+}: {
+  graph: AdjacencyMatrixGraph;
+  onVertexVisit?: (visitedVertexIndex: number) => void;
+}) => {
   const visitedVerticesMap: boolean[] = [];
 
   const firstVertexIndex = 0;
@@ -21,7 +24,7 @@ export const adjacencyMatrixGraphBfs = (
     if (visitingVertexIndex === null) {
       break;
     }
-    onVertexVisit(visitingVertexIndex);
+    onVertexVisit?.(visitingVertexIndex);
     const adjacencyVerticesConnectionMap = graph[visitingVertexIndex];
     adjacencyVerticesConnectionMap.forEach((adjacentVertexConnected, adjacentVertexIndex) => {
       const adjacentVertexVisited = visitedVerticesMap[adjacentVertexIndex];
@@ -30,4 +33,6 @@ export const adjacencyMatrixGraphBfs = (
       }
     });
   }
+
+  return { visitedVerticesMap };
 };

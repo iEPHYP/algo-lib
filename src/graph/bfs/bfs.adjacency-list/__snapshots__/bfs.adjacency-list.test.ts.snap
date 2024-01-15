@@ -12,3 +12,16 @@ exports[`adjacencyListGraphDfs should print visited vertices in the right order 
   7,
 ]
 `;
+
+exports[`adjacencyListGraphDfs should print visited vertices in the right order 2`] = `
+[
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+  true,
+]
+`;
