@@ -2,7 +2,7 @@ import { adjacencyListGraphDfs } from '../dfs';
 import { AdjacencyListGraph, AdjacencyListVertex } from '../graph-storage';
 
 // Complexity O(M + N * (N + M)) => O(N^2 + N * M)
-export const searchGraphComponents = (graph: AdjacencyListGraph) => {
+export const findGraphComponents = (graph: AdjacencyListGraph) => {
   // TODO: move this kind of maps into custom arrays with methods to return false instead of undefined, visit, isVisited(index)
   let currentVisitedVerticesMap: boolean[] = [];
   const graphComponents: AdjacencyListVertex[][] = [];

@@ -1,5 +1,5 @@
 import { convertEdgesToAdjacencyListGraph, RawEdges } from '../graph-storage';
-import { searchGraphComponents } from './search-components';
+import { findGraphComponents } from './find-components';
 
 const disconnectedGraphRawEdges: RawEdges = [
   [0, 5],
@@ -13,7 +13,7 @@ const disconnectedGraphRawEdges: RawEdges = [
 test('', () => {
   const graph = convertEdgesToAdjacencyListGraph(disconnectedGraphRawEdges);
 
-  const { graphComponents } = searchGraphComponents(graph);
+  const { graphComponents } = findGraphComponents(graph);
 
   expect(graphComponents).toMatchSnapshot();
 });
