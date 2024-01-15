@@ -10,7 +10,7 @@ const disconnectedGraphRawEdges: RawEdges = [
   [7, 8],
 ];
 
-test('', () => {
+test('findGraphComponents finds components correctly', () => {
   const graph = convertEdgesToAdjacencyListGraph(disconnectedGraphRawEdges);
 
   const { graphComponents } = findGraphComponents(graph);
