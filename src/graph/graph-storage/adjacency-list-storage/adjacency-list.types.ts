@@ -11,6 +11,7 @@ export interface AbstractAdjacencyListGraphConstructorOptions<
   size?: number;
 }
 
+// TODO: add test coverage [LP]
 export class AbstractAdjacencyListGraph<TVertex extends AdjacencyListVertex = AdjacencyListVertex> {
   private adjacencyList: (
     | TVertex
