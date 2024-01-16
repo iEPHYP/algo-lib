@@ -12,6 +12,7 @@ export const adjacencyListGraphBfs = ({
   starterVertexIndex?: number;
   onVertexVisit?: (vertex: AdjacencyListVertex) => void;
 }) => {
+  // TODO: rewrite all visiteMaps into VisitMap from @/visit-map
   const visitedVerticesMap: boolean[] = [];
   // TODO: better to create a class for Maps like this
   const distancesMap: number[] = [];
