@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BinarySearchTree bfs works properly 1`] = `
+[
+  10,
+  5,
+  14,
+  3,
+  9,
+  12,
+]
+`;
+
+exports[`BinarySearchTree finds node by value properly: for 9 1`] = `
+BstNode {
+  "duplicatesCount": 0,
+  "leftChild": null,
+  "rightChild": null,
+  "value": 9,
+}
+`;
+
+exports[`BinarySearchTree finds node by value properly: for 10 1`] = `
+BstNode {
+  "duplicatesCount": 0,
+  "leftChild": BstNode {
+    "duplicatesCount": 0,
+    "leftChild": BstNode {
+      "duplicatesCount": 0,
+      "leftChild": null,
+      "rightChild": null,
+      "value": 3,
+    },
+    "rightChild": BstNode {
+      "duplicatesCount": 0,
+      "leftChild": null,
+      "rightChild": null,
+      "value": 9,
+    },
+    "value": 5,
+  },
+  "rightChild": BstNode {
+    "duplicatesCount": 0,
+    "leftChild": BstNode {
+      "duplicatesCount": 0,
+      "leftChild": null,
+      "rightChild": null,
+      "value": 12,
+    },
+    "rightChild": null,
+    "value": 14,
+  },
+  "value": 10,
+}
+`;
+
+exports[`BinarySearchTree finds node by value properly: for 12 1`] = `
+BstNode {
+  "duplicatesCount": 0,
+  "leftChild": null,
+  "rightChild": null,
+  "value": 12,
+}
+`;
+
+exports[`BinarySearchTree finds node by value properly: for 13 1`] = `null`;
+
+exports[`BinarySearchTree finds node by value properly: for 16 1`] = `null`;
+
+exports[`BinarySearchTree finds node by value properly: on empty tree 1`] = `null`;
+
+exports[`BinarySearchTree finds node by value properly: on tree with root only 1`] = `null`;
+
+exports[`BinarySearchTree finds node by value properly: on tree with root only 2`] = `
+BstNode {
+  "duplicatesCount": 0,
+  "leftChild": null,
+  "rightChild": null,
+  "value": 10,
+}
+`;
+
+exports[`BinarySearchTree inserts value properly 1`] = `
+BinarySearchTree {
+  "root": BstNode {
+    "duplicatesCount": 0,
+    "leftChild": BstNode {
+      "duplicatesCount": 0,
+      "leftChild": BstNode {
+        "duplicatesCount": 0,
+        "leftChild": null,
+        "rightChild": null,
+        "value": 3,
+      },
+      "rightChild": BstNode {
+        "duplicatesCount": 0,
+        "leftChild": null,
+        "rightChild": null,
+        "value": 9,
+      },
+      "value": 5,
+    },
+    "rightChild": BstNode {
+      "duplicatesCount": 0,
+      "leftChild": BstNode {
+        "duplicatesCount": 0,
+        "leftChild": null,
+        "rightChild": null,
+        "value": 12,
+      },
+      "rightChild": null,
+      "value": 14,
+    },
+    "value": 10,
+  },
+}
+`;
+
+exports[`BinarySearchTree inserts value properly for duplicated items 1`] = `
+BinarySearchTree {
+  "root": BstNode {
+    "duplicatesCount": 0,
+    "leftChild": BstNode {
+      "duplicatesCount": 0,
+      "leftChild": BstNode {
+        "duplicatesCount": 0,
+        "leftChild": null,
+        "rightChild": null,
+        "value": 3,
+      },
+      "rightChild": BstNode {
+        "duplicatesCount": 0,
+        "leftChild": null,
+        "rightChild": null,
+        "value": 9,
+      },
+      "value": 5,
+    },
+    "rightChild": BstNode {
+      "duplicatesCount": 1,
+      "leftChild": BstNode {
+        "duplicatesCount": 0,
+        "leftChild": null,
+        "rightChild": null,
+        "value": 12,
+      },
+      "rightChild": null,
+      "value": 14,
+    },
+    "value": 10,
+  },
+}
+`;
