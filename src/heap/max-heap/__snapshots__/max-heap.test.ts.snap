@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MaxHeap extracts Max root properly: extracting 0 from heap with several items 1`] = `[]`;
+
+exports[`MaxHeap extracts Max root properly: extracting 1 from heap with several items 1`] = `
+[
+  0,
+]
+`;
+
+exports[`MaxHeap extracts Max root properly: extracting 2 from heap with several items 1`] = `
+[
+  1,
+  0,
+]
+`;
+
+exports[`MaxHeap extracts Max root properly: extracting 3 from heap with several items 1`] = `
+[
+  2,
+  1,
+  0,
+]
+`;
+
+exports[`MaxHeap extracts Max root properly: extracting 4 from heap with several items 1`] = `
+[
+  3,
+  2,
+  0,
+  1,
+]
+`;
+
+exports[`MaxHeap extracts Max root properly: extracting 5 from heap with several items 1`] = `
+[
+  4,
+  2,
+  3,
+  1,
+  0,
+]
+`;
+
+exports[`MaxHeap extracts Max root properly: extracting 6 from heap with several items 1`] = `
+[
+  5,
+  4,
+  3,
+  1,
+  2,
+  0,
+]
+`;
+
+exports[`MaxHeap extracts Max root properly: extracting 10 from heap with several items 1`] = `
+[
+  6,
+  4,
+  5,
+  1,
+  2,
+  0,
+  3,
+]
+`;
+
+exports[`MaxHeap extracts Max root properly: extracting 19 from heap with several items 1`] = `
+[
+  10,
+  6,
+  5,
+  4,
+  2,
+  0,
+  3,
+  1,
+]
+`;
+
+exports[`MaxHeap extracts Max root properly: extracting from heap with 1 item 1`] = `[]`;
+
+exports[`MaxHeap extracts Max root properly: extracting from heap with 2 items 1`] = `
+[
+  1,
+]
+`;
+
+exports[`MaxHeap extracts Max root properly: heap with several items 1`] = `
+[
+  19,
+  10,
+  5,
+  6,
+  2,
+  0,
+  3,
+  1,
+  4,
+]
+`;
+
+exports[`MaxHeap inserts items properly 1`] = `
+[
+  1,
+]
+`;
+
+exports[`MaxHeap inserts items properly 2`] = `
+[
+  5,
+  1,
+]
+`;
+
+exports[`MaxHeap inserts items properly 3`] = `
+[
+  5,
+  1,
+  3,
+]
+`;
+
+exports[`MaxHeap inserts items properly 4`] = `
+[
+  5,
+  4,
+  3,
+  1,
+]
+`;
+
+exports[`MaxHeap inserts items properly 5`] = `
+[
+  5,
+  4,
+  3,
+  1,
+  2,
+]
+`;
+
+exports[`MaxHeap inserts items properly 6`] = `
+[
+  5,
+  4,
+  3,
+  1,
+  2,
+  0,
+]
+`;
+
+exports[`MaxHeap inserts items properly 7`] = `
+[
+  10,
+  4,
+  5,
+  1,
+  2,
+  0,
+  3,
+]
+`;
