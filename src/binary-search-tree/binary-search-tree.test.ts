@@ -3,6 +3,15 @@ import { BinarySearchTree } from './binary-search-tree';
 describe('BinarySearchTree', () => {
   let bst = new BinarySearchTree();
 
+  const fillBst = () => {
+    bst.insert(10);
+    bst.insert(5);
+    bst.insert(14);
+    bst.insert(3);
+    bst.insert(9);
+    bst.insert(12);
+  };
+
   beforeEach(() => {
     bst = new BinarySearchTree();
   });
@@ -57,15 +66,88 @@ describe('BinarySearchTree', () => {
   });
 
   it('bfs works properly', () => {
-    bst.insert(10);
-    bst.insert(5);
-    bst.insert(14);
-    bst.insert(3);
-    bst.insert(9);
-    bst.insert(12);
+    fillBst();
 
     const nodeVisitOrder: number[] = [];
     bst.bfs({
+      onNodeVisit: (node) => {
+        nodeVisitOrder.push(node.value);
+      },
+    });
+
+    expect(nodeVisitOrder).toMatchSnapshot();
+  });
+
+  it('preorderDfs works properly', () => {
+    fillBst();
+
+    const nodeVisitOrder: number[] = [];
+    bst.preorderDfs({
+      onNodeVisit: (node) => {
+        nodeVisitOrder.push(node.value);
+      },
+    });
+
+    expect(nodeVisitOrder).toMatchSnapshot();
+  });
+
+  it('postorderDfs works properly', () => {
+    fillBst();
+
+    const nodeVisitOrder: number[] = [];
+    bst.postorderDfs({
+      onNodeVisit: (node) => {
+        nodeVisitOrder.push(node.value);
+      },
+    });
+
+    expect(nodeVisitOrder).toMatchSnapshot();
+  });
+
+  it('inorderDfs works properly', () => {
+    fillBst();
+
+    const nodeVisitOrder: number[] = [];
+    bst.inorderDfs({
+      onNodeVisit: (node) => {
+        nodeVisitOrder.push(node.value);
+      },
+    });
+
+    expect(nodeVisitOrder).toMatchSnapshot();
+  });
+
+  it('mrlDfs works properly', () => {
+    fillBst();
+
+    const nodeVisitOrder: number[] = [];
+    bst.mrlDfs({
+      onNodeVisit: (node) => {
+        nodeVisitOrder.push(node.value);
+      },
+    });
+
+    expect(nodeVisitOrder).toMatchSnapshot();
+  });
+
+  it('rmlDfs works properly', () => {
+    fillBst();
+
+    const nodeVisitOrder: number[] = [];
+    bst.rmlDfs({
+      onNodeVisit: (node) => {
+        nodeVisitOrder.push(node.value);
+      },
+    });
+
+    expect(nodeVisitOrder).toMatchSnapshot();
+  });
+
+  it('rlmDfs works properly', () => {
+    fillBst();
+
+    const nodeVisitOrder: number[] = [];
+    bst.rlmDfs({
       onNodeVisit: (node) => {
         nodeVisitOrder.push(node.value);
       },

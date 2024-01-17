@@ -20,6 +20,7 @@ export class BinarySearchTree<TValue = number> {
     this.root = root ?? null;
   }
 
+  // Complexity O(logN)T AVG, O(1)S. O(N)T WORST
   public insert(value: TValue): BstNode<TValue> {
     const node = new BstNode(value);
     if (!this.root) {
@@ -56,6 +57,7 @@ export class BinarySearchTree<TValue = number> {
     return node;
   }
 
+  // Complexity O(logN)T AVG, O(1)S. O(N)T WORST
   public find(value: TValue): BstNode<TValue> | null {
     if (this.root === null) {
       return null;
@@ -82,10 +84,12 @@ export class BinarySearchTree<TValue = number> {
     }
   }
 
+  // Complexity O(logN)T AVG, O(1)S. O(N)T WORST
   public has(value: TValue): boolean {
     return !!this.find(value);
   }
 
+  // Complexity O(N)T, O(N)S WORST on a chain
   public bfs({ onNodeVisit }: { onNodeVisit: (node: BstNode<TValue>) => void }) {
     if (!this.root) {
       return;
@@ -106,6 +110,92 @@ export class BinarySearchTree<TValue = number> {
       [currentNode.leftChild, currentNode.rightChild].forEach((childNode) => {
         childNode && queue.enqueue(childNode);
       });
+    }
+  }
+
+  // Complexity O(N)T, O(1)S
+  // MLR
+  // TODO: write down flattening the tree to the cloning and serialization and deserialization methods in O(N) rather than O(NlogN)
+  public preorderDfs({ onNodeVisit }: { onNodeVisit: (node: BstNode<TValue>) => void }) {
+    const traverse = (node: BstNode<TValue>) => {
+      onNodeVisit(node);
+
+      node.leftChild && traverse(node.leftChild);
+      node.rightChild && traverse(node.rightChild);
+    };
+
+    if (this.root) {
+      traverse(this.root);
+    }
+  }
+
+  // Complexity O(N)T, O(1)S
+  // LRM
+  public postorderDfs({ onNodeVisit }: { onNodeVisit: (node: BstNode<TValue>) => void }) {
+    const traverse = (node: BstNode<TValue>) => {
+      node.leftChild && traverse(node.leftChild);
+      node.rightChild && traverse(node.rightChild);
+      onNodeVisit(node);
+    };
+
+    if (this.root) {
+      traverse(this.root);
+    }
+  }
+
+  // Complexity O(N)T, O(1)S
+  // LMR
+  public inorderDfs({ onNodeVisit }: { onNodeVisit: (node: BstNode<TValue>) => void }) {
+    const traverse = (node: BstNode<TValue>) => {
+      node.leftChild && traverse(node.leftChild);
+      onNodeVisit(node);
+      node.rightChild && traverse(node.rightChild);
+    };
+
+    if (this.root) {
+      traverse(this.root);
+    }
+  }
+
+  // Complexity O(N)T, O(1)S
+  // MRL
+  public mrlDfs({ onNodeVisit }: { onNodeVisit: (node: BstNode<TValue>) => void }) {
+    const traverse = (node: BstNode<TValue>) => {
+      onNodeVisit(node);
+      node.rightChild && traverse(node.rightChild);
+      node.leftChild && traverse(node.leftChild);
+    };
+
+    if (this.root) {
+      traverse(this.root);
+    }
+  }
+
+  // Complexity O(N)T, O(1)S
+  // RML
+  public rmlDfs({ onNodeVisit }: { onNodeVisit: (node: BstNode<TValue>) => void }) {
+    const traverse = (node: BstNode<TValue>) => {
+      node.rightChild && traverse(node.rightChild);
+      onNodeVisit(node);
+      node.leftChild && traverse(node.leftChild);
+    };
+
+    if (this.root) {
+      traverse(this.root);
+    }
+  }
+
+  // Complexity O(N)T, O(1)S
+  // RLM
+  public rlmDfs({ onNodeVisit }: { onNodeVisit: (node: BstNode<TValue>) => void }) {
+    const traverse = (node: BstNode<TValue>) => {
+      node.rightChild && traverse(node.rightChild);
+      node.leftChild && traverse(node.leftChild);
+      onNodeVisit(node);
+    };
+
+    if (this.root) {
+      traverse(this.root);
     }
   }
 
