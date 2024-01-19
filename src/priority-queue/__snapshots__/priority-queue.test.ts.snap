@@ -1,0 +1,295 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PriorityQueue dequeues properly: after empty queue 1`] = `[]`;
+
+exports[`PriorityQueue dequeues properly: on full queue 1`] = `
+[
+  {
+    "diagnosis": "bleeding",
+    "name": "Jane",
+    "priority": 2,
+  },
+  {
+    "diagnosis": "injury",
+    "name": "Simon",
+    "priority": 3,
+  },
+  {
+    "diagnosis": "flu",
+    "name": "May",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "flu",
+    "name": "Dread",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "flu",
+    "name": "Nick",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "sniffing",
+    "name": "Aaron",
+    "priority": 6,
+  },
+  {
+    "diagnosis": "high temperature",
+    "name": "Jack",
+    "priority": 8,
+  },
+]
+`;
+
+exports[`PriorityQueue dequeues properly: on full queue 2`] = `
+[
+  {
+    "diagnosis": "injury",
+    "name": "Simon",
+    "priority": 3,
+  },
+  {
+    "diagnosis": "flu",
+    "name": "Nick",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "flu",
+    "name": "May",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "flu",
+    "name": "Dread",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "high temperature",
+    "name": "Jack",
+    "priority": 8,
+  },
+  {
+    "diagnosis": "sniffing",
+    "name": "Aaron",
+    "priority": 6,
+  },
+]
+`;
+
+exports[`PriorityQueue dequeues properly: on full queue 3`] = `
+[
+  {
+    "diagnosis": "flu",
+    "name": "May",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "flu",
+    "name": "Nick",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "sniffing",
+    "name": "Aaron",
+    "priority": 6,
+  },
+  {
+    "diagnosis": "flu",
+    "name": "Dread",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "high temperature",
+    "name": "Jack",
+    "priority": 8,
+  },
+]
+`;
+
+exports[`PriorityQueue dequeues properly: on full queue 4`] = `
+[
+  {
+    "diagnosis": "flu",
+    "name": "Nick",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "flu",
+    "name": "Dread",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "sniffing",
+    "name": "Aaron",
+    "priority": 6,
+  },
+  {
+    "diagnosis": "high temperature",
+    "name": "Jack",
+    "priority": 8,
+  },
+]
+`;
+
+exports[`PriorityQueue dequeues properly: on full queue 5`] = `
+[
+  {
+    "diagnosis": "flu",
+    "name": "Dread",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "high temperature",
+    "name": "Jack",
+    "priority": 8,
+  },
+  {
+    "diagnosis": "sniffing",
+    "name": "Aaron",
+    "priority": 6,
+  },
+]
+`;
+
+exports[`PriorityQueue dequeues properly: on full queue 6`] = `
+[
+  {
+    "diagnosis": "sniffing",
+    "name": "Aaron",
+    "priority": 6,
+  },
+  {
+    "diagnosis": "high temperature",
+    "name": "Jack",
+    "priority": 8,
+  },
+]
+`;
+
+exports[`PriorityQueue dequeues properly: on full queue 7`] = `
+[
+  {
+    "diagnosis": "high temperature",
+    "name": "Jack",
+    "priority": 8,
+  },
+]
+`;
+
+exports[`PriorityQueue dequeues properly: on full queue 8`] = `[]`;
+
+exports[`PriorityQueue dequeues properly: on full queue 9`] = `[]`;
+
+exports[`PriorityQueue dequeues properly: value on empty queue 1`] = `null`;
+
+exports[`PriorityQueue dequeues properly: value on full queue 1`] = `
+{
+  "diagnosis": "exploded head",
+  "name": "Eric",
+  "priority": 0,
+}
+`;
+
+exports[`PriorityQueue dequeues properly: value on full queue 2`] = `
+{
+  "diagnosis": "bleeding",
+  "name": "Jane",
+  "priority": 2,
+}
+`;
+
+exports[`PriorityQueue dequeues properly: value on full queue 3`] = `
+{
+  "diagnosis": "injury",
+  "name": "Simon",
+  "priority": 3,
+}
+`;
+
+exports[`PriorityQueue dequeues properly: value on full queue 4`] = `
+{
+  "diagnosis": "flu",
+  "name": "May",
+  "priority": 4,
+}
+`;
+
+exports[`PriorityQueue dequeues properly: value on full queue 5`] = `
+{
+  "diagnosis": "flu",
+  "name": "Nick",
+  "priority": 4,
+}
+`;
+
+exports[`PriorityQueue dequeues properly: value on full queue 6`] = `
+{
+  "diagnosis": "flu",
+  "name": "Dread",
+  "priority": 4,
+}
+`;
+
+exports[`PriorityQueue dequeues properly: value on full queue 7`] = `
+{
+  "diagnosis": "sniffing",
+  "name": "Aaron",
+  "priority": 6,
+}
+`;
+
+exports[`PriorityQueue dequeues properly: value on full queue 8`] = `
+{
+  "diagnosis": "high temperature",
+  "name": "Jack",
+  "priority": 8,
+}
+`;
+
+exports[`PriorityQueue dequeues properly: value on full queue 9`] = `null`;
+
+exports[`PriorityQueue enqueues properly 1`] = `
+[
+  {
+    "diagnosis": "exploded head",
+    "name": "Eric",
+    "priority": 0,
+  },
+  {
+    "diagnosis": "bleeding",
+    "name": "Jane",
+    "priority": 2,
+  },
+  {
+    "diagnosis": "flu",
+    "name": "May",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "injury",
+    "name": "Simon",
+    "priority": 3,
+  },
+  {
+    "diagnosis": "flu",
+    "name": "Nick",
+    "priority": 4,
+  },
+  {
+    "diagnosis": "sniffing",
+    "name": "Aaron",
+    "priority": 6,
+  },
+  {
+    "diagnosis": "high temperature",
+    "name": "Jack",
+    "priority": 8,
+  },
+  {
+    "diagnosis": "flu",
+    "name": "Dread",
+    "priority": 4,
+  },
+]
+`;
