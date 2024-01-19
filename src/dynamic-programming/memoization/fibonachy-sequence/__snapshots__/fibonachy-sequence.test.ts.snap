@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`calcFibonachyItemMemoizingBottomToTopAt works properly 1`] = `1346269`;
+
+exports[`calcFibonachyItemMemoizingRecursivelyTopToBottomAt works properly 1`] = `1346269`;
+
+exports[`calcFibonachyItemMemoizingRecursivelyTopToBottomAt works properly: Call stack exceeded error 1`] = `[RangeError: Maximum call stack size exceeded]`;
+
+exports[`calcFibonachyItemRecursivelyAt works properly 1`] = `1346269`;
