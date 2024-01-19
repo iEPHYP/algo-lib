@@ -13,6 +13,7 @@ export class BstNode<TValue = number> {
   }
 }
 
+// TODO: realize delete method
 export class BinarySearchTree<TValue = number> {
   public root: BstNode<TValue> | null = null;
 
