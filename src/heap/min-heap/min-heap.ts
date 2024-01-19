@@ -1,6 +1,6 @@
 import { AbstractHeap } from '../abstract-heap';
 
-export class MaxHeap<
+export class MinHeap<
   TItem extends number | Record<string, any> = number,
 > extends AbstractHeap<TItem> {
   // Complexity O(logN)
@@ -11,7 +11,7 @@ export class MaxHeap<
     let newItemIndex = this.items.length - 1;
     let parentIndex = this.getParentIndex(newItemIndex);
     let parentValue = this.getValueAt(parentIndex);
-    while (parentValue !== undefined && newItemValue > parentValue) {
+    while (parentValue !== undefined && newItemValue < parentValue) {
       this.swapItems(parentIndex, newItemIndex);
 
       newItemIndex = parentIndex;
@@ -21,7 +21,7 @@ export class MaxHeap<
   }
 
   // Complexity O(logN)
-  public extractMax() {
+  public extractMin() {
     const root = this.items[this.firstIndex()];
 
     if (this.size() <= 1) {
@@ -47,21 +47,21 @@ export class MaxHeap<
       const rightChildValue = this.getValueAt(rightChildIndex);
 
       const swapWithLeftChild = (leftChildValue: number) => {
-        if (leftChildValue > unstablizedNewRootValue) {
+        if (leftChildValue < unstablizedNewRootValue) {
           this.swapItems(leftChildIndex, unstablizedNewRootIndex);
           sinkDown(leftChildIndex);
         }
       };
 
       const swapWithRightChild = (rightChildValue: number) => {
-        if (rightChildValue > unstablizedNewRootValue) {
+        if (rightChildValue < unstablizedNewRootValue) {
           this.swapItems(rightChildIndex, unstablizedNewRootIndex);
           sinkDown(rightChildIndex);
         }
       };
 
       if (leftChildValue !== undefined && rightChildValue !== undefined) {
-        if (leftChildValue > rightChildValue) {
+        if (leftChildValue < rightChildValue) {
           swapWithLeftChild(leftChildValue);
         } else {
           swapWithRightChild(rightChildValue);
