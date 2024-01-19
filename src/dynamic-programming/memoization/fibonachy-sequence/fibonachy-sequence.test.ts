@@ -1,8 +1,6 @@
-import {
-  calcFibonachyItemMemoizingBottomToTopAt,
-  calcFibonachyItemRecursivelyAt,
-  calcFibonachyItemMemoizingRecursivelyTopToBottomAt,
-} from './fibonachy-sequence';
+import { calcFibonachyItemMemoizingBottomToTopAt } from './MemoizingBottomToTop';
+import { calcFibonachyItemMemoizingRecursivelyTopToBottomAt } from './MemoizingRecursivelyTopToBottom';
+import { calcFibonachyItemRecursivelyAt } from './RecursivelyWithoutMemoizing';
 
 describe(calcFibonachyItemMemoizingRecursivelyTopToBottomAt.name, () => {
   it('works properly', () => {
