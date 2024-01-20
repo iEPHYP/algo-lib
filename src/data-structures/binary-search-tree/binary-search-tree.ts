@@ -1,4 +1,4 @@
-import { Queue } from '@/queue';
+import { Queue } from '@/data-structures/queue';
 
 export class BstNode<TValue = number> {
   public value: TValue;

@@ -1,4 +1,4 @@
-import { Queue } from '@/queue';
+import { Queue } from '@/data-structures/queue';
 
 import { AdjacencyMatrixGraph } from '../../graph-storage';
 

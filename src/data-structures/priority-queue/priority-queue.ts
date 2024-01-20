@@ -1,4 +1,4 @@
-import { MinHeap } from '@/heap';
+import { MinHeap } from '@/data-structures/heap';
 
 export interface PriorityQueueItem {
   priority: number;
