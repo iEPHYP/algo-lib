@@ -1,5 +1,5 @@
-import { MaxHeap } from '../max-heap';
-import { MinHeap } from '../min-heap';
+import { MaxHeap } from 'data-structures/heap/max-heap';
+import { MinHeap } from 'data-structures/heap/min-heap';
 
 // TODO: how to make this sort using compareFn? Is that possible?
 // Compexity O(2NlogN) => O(NlogN)
