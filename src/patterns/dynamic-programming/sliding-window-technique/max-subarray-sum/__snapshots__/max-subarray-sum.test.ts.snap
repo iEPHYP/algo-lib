@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`maxSubarraySum works properly: maxSubarraySum([], 4) 1`] = `
+{
+  "subarray": [],
+  "sum": null,
+}
+`;
+
+exports[`maxSubarraySum works properly: maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 2) 1`] = `
+{
+  "subarray": [
+    2,
+    8,
+  ],
+  "sum": 10,
+}
+`;
+
+exports[`maxSubarraySum works properly: maxSubarraySum([1, 2, 5, 2, 8, 1, 5], 4) 1`] = `
+{
+  "subarray": [
+    2,
+    5,
+    2,
+    8,
+  ],
+  "sum": 17,
+}
+`;
+
+exports[`maxSubarraySum works properly: maxSubarraySum([1, 5, 7], 0) 1`] = `
+{
+  "subarray": [],
+  "sum": null,
+}
+`;
+
+exports[`maxSubarraySum works properly: maxSubarraySum([1, 5, 7], 4) 1`] = `
+{
+  "subarray": [],
+  "sum": null,
+}
+`;
+
+exports[`maxSubarraySum works properly: maxSubarraySum([4, 2, 1, 6, 2], 4) 1`] = `
+{
+  "subarray": [
+    4,
+    2,
+    1,
+    6,
+  ],
+  "sum": 13,
+}
+`;
+
+exports[`maxSubarraySum works properly: maxSubarraySum([4, 2, 1, 6], 1) 1`] = `
+{
+  "subarray": [
+    6,
+  ],
+  "sum": 6,
+}
+`;
