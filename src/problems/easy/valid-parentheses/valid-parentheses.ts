@@ -1,6 +1,4 @@
-export function isValid(bracketsExpression: string): boolean {
-  const bracketsSequence = bracketsExpression.split('');
-
+export function isValid(bracketsSequence: string): boolean {
   const stack = [];
   for (const bracket of bracketsSequence) {
     if (isOpenBracket(bracket)) {
