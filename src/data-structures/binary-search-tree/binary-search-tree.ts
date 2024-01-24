@@ -200,6 +200,6 @@ export class BinarySearchTree<TValue = number> {
     }
   }
 
-  // TODO: realize pretty printing
+  // TODO: realize pretty printing https://leetcode.com/problems/print-binary-tree/description/
   // public toString() {}
 }
