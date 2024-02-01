@@ -5,6 +5,7 @@ module.exports = {
   plugins: ['typescript', 'prettier', 'simple-import-sort'],
   parser: '@typescript-eslint/parser',
   rules: {
+    'prefer-const': 'off',
     'max-lines': ['warn', { max: 500, skipComments: true, skipBlankLines: true }],
     'no-console': [buildEnvironment ? 'error' : 'warn', { allow: ['error', 'warn'] }],
     'eol-last': ['error', 'always'],
